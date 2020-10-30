@@ -1,13 +1,20 @@
 with 
 
-customers as (
+source as (
+
+    select * from raw.jaffle_shop.customers
+
+),
+
+renamed as (
     
     select 
+
         id as customer_id,
         first_name,
         last_name
 
-    from raw.jaffle_shop.customers
+    from source
 )
 
-select * from customers
+select * from renamed

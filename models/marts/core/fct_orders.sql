@@ -6,12 +6,6 @@ orders as (
 
 ),
 
-customers as (
-
-    select * from {{ ref('stg_customers') }}
-
-),
-
 payments as (
 
     select * from {{ ref('stg_payments') }}

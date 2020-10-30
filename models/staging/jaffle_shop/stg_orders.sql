@@ -1,14 +1,22 @@
 with 
 
-orders as (
+source as (
     
-    select
+    select * from raw.jaffle_shop.orders
+
+),
+
+renamed as (
+
+    select 
+
         id as order_id,
         user_id as customer_id,
         order_date,
         status
 
-    from raw.jaffle_shop.orders
+    from source
+
 )
 
-select * from orders
+select * from renamed
