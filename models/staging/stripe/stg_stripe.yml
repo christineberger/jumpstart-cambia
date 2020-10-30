@@ -10,5 +10,5 @@ models:
           tests:
             - unique
             - not_null
-        - name: amount_in_cents
+        - name: amount_usd
           description: '{{ doc("stripe_payment_amount") }}'
