@@ -20,7 +20,7 @@ joined as (
         orders.customer_id,
         order_date,
 
-        sum(payments.amount_cents)/100 as amount
+        sum(payments.amount_usd) as amount
         
     from orders
     left join payments
