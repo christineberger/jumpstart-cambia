@@ -1,0 +1,13 @@
+version: 2
+
+models:
+
+    - name: payments_daily_summary
+      description: >
+        This model shows the daily number of orders and payment amounts based 
+        on method.
+      columns: 
+        - name: date_day
+          tests:
+            - unique
+            - not_null
