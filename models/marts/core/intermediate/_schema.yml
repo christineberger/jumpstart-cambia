@@ -1,0 +1,12 @@
+version: 2
+
+models:
+
+    - name: int_orders__pivoted
+      description: >
+        This model pivots the order payment method amount to columns.
+      columns: 
+        - name: order_id
+          tests:
+            - unique
+            - not_null
