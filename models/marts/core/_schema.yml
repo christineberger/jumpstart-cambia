@@ -1,0 +1,23 @@
+version: 2
+
+models:
+
+    - name: dim_customers
+      description: >
+        This model joins orders to customers to get aggregated order info
+        at one row per customer.
+      columns: 
+        - name: customer_id
+          tests:
+            - unique
+            - not_null
+            
+    - name: fct_orders
+      description: >
+        This model joins payments to orders to get aggregated payment info
+        at one row per order.
+      columns: 
+        - name: order_id
+          tests:
+            - unique
+            - not_null
