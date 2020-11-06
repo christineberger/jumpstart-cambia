@@ -2,7 +2,7 @@ version: 2
 
 models:
 
-    - name: int_orders__pivoted
+    - name: int_payment_methods__pivoted
       description: >
         This model pivots the order payment method amount to columns.
       columns: 

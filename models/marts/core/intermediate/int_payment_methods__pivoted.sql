@@ -17,7 +17,8 @@ pivoted as (
     select
     
         order_id,
-        
+        date(created_at) as payment_date,
+        sum(amount_usd) as total_payments,
         {%- for method in payment_methods %}
         sum(case 
             when payment_method = '{{ method }}'
@@ -28,7 +29,7 @@ pivoted as (
         {%- endfor %}
     
     from payments
-    group by 1
+    group by 1, 2
     
 )
 
